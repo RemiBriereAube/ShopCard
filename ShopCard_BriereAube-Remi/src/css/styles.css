@@ -1,0 +1,86 @@
+/* ------------SCROLLBAR STYLE------------*/
+    ::-webkit-scrollbar {
+        background-color: black;
+        width: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #ff898f;
+    }
+    
+/* ------------ANIMATE BACKGROUND STYLE------------*/
+    .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(253, 215, 215) 50%, rgb(222, 242, 255) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+    } 
+    .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:7s;
+    }
+    .bg3 {
+    animation-duration:5s;
+    }
+    @keyframes slide {
+    0% {
+        transform:translateX(-25%);
+    }
+    100% {
+        transform:translateX(25%);
+    }
+    }
+/* ------------CARD STYLE------------ */
+    .card{
+        width: 18rem;
+        justify-content: center;
+    } 
+
+/* ------------TOGGLE STYLE------------*/
+.btnList{
+    border:none;
+    background-color:transparent;
+    transition-duration: 0.3s;
+}
+.btnList:hover {
+    color: rgb(134, 134, 134);
+}
+
+.btnList:focus {
+    color: rgb(141, 2, 255);
+}
+
+/* ------------FOOTER STYLE------------*/
+footer {
+    margin-top: 555px;
+    display: flex;
+    font-size: 10px;
+    width: 100%;
+    line-height: 50px;
+    color: white;
+    background-color: #24242c;
+    text-align: center;
+    text-decoration: none;
+    justify-content: space-around;
+    font-weight: 600;
+  }
+
+  footer p {
+    margin: 0;
+  }
+/* ------------MEDIA QUERRY STYLE------------*/ 
+    /*On screens that are 992px or less, set the background color to blue */
+    @media screen and (min-width: 1200px) {
+        .card{
+            justify-content: center;
+            margin-right: 0;
+        }
+        footer {
+        margin-top: 0px;
+        font-size: 14px;
+          }
+      }
